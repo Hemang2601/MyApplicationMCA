@@ -1,0 +1,75 @@
+package com.example.myapplicationmca;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    Button btnUnit1, btnUnit2, btnUnit3, btnUnit4, btnUnit5, btnextra;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btnUnit1 = findViewById(R.id.btnUnit1);
+        btnUnit2 = findViewById(R.id.btnUnit2);
+        btnUnit3 = findViewById(R.id.btnUnit3);
+        btnUnit4 = findViewById(R.id.btnUnit4);
+        btnUnit5 = findViewById(R.id.btnUnit5);
+        btnextra = findViewById(R.id.btnextra);
+
+        btnUnit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UNIT1_LIST_PAGE.class);
+                startActivity(i);
+            }
+        });
+        btnUnit2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UNIT2_LIST_PAGE.class);
+                startActivity(i);
+            }
+        });
+        btnUnit3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UNIT3_LIST_PAGE.class);
+                startActivity(i);
+            }
+        });
+        btnUnit4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UNIT4_LIST_PAGE.class);
+                startActivity(i);
+            }
+        });
+        btnUnit5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UNIT5_LIST_PAGE.class);
+                startActivity(i);
+            }
+        });
+        btnextra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,Extra_Program.class);
+                startActivity(i);
+            }
+        });
+
+
+    }
+
+
+}
