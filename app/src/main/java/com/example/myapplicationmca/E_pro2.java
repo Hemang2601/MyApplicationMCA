@@ -55,13 +55,14 @@ public class E_pro2 extends AppCompatActivity {
         });
 
         String[] country = {"India", "USA", "UK", "Canada"};
-        ArrayAdapter<String> arr_con = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, country);
+        ArrayAdapter<String> arr_con = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, country);
         spinner.setAdapter(arr_con);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(E_pro2.this, "USER SELECT COUNTRY : " + country[i], Toast.LENGTH_SHORT).show();
+                String con = spinner.getSelectedItem().toString().trim();
+                Toast.makeText(E_pro2.this, "USER SELECTED COUNTRY : " + con, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -101,8 +102,6 @@ public class E_pro2 extends AppCompatActivity {
                 if (c4.isChecked()) {
                     vehicle += c4.getText().toString().trim() + " , ";
                 }
-
-                // remove last comma and space
                 if (!vehicle.isEmpty()) {
                     vehicle = vehicle.substring(0, vehicle.length() - 2);
                 }

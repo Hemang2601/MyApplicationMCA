@@ -13,7 +13,6 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_weight="1"
         android:layout_marginBottom="10dp" />
 
     <!-- Spinner Section -->
@@ -21,16 +20,14 @@
         android:id="@+id/spin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginBottom="10dp" />
 
     <!-- RadioGroup Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
 
         <RadioGroup
             android:id="@+id/radgrp"
@@ -62,7 +59,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="vertical">
 
         <CheckBox
@@ -90,10 +86,10 @@
             android:text="PLANE" />
 
         <Button
+            android:id="@+id/btnsubmitepro2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SUBMIT"
-            android:id="@+id/btnsubmitepro2"/>
+            android:text="SUBMIT" />
 
         <TextView
             android:id="@+id/txtresult"
