@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="8dp"
-                android:text="PROGRAM 1"
+                android:text="Intent Passing"
                 app:cornerRadius="12dp"
                 app:strokeColor="@color/black"
                 app:strokeWidth="2dp" />
@@ -51,9 +51,9 @@
                 android:id="@+id/btnpro2"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="PROGRAM 2"
+                android:text="SPINNER / DROPDOWN / RADIOGROUP / CHECK BOX"
                 app:cornerRadius="12dp"
                 app:strokeColor="@color/black"
                 app:strokeWidth="2dp" />

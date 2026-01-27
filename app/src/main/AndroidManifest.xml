@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyApplicationMCA"
         tools:targetApi="31">
         <activity
+            android:name=".E_pro2"
+            android:exported="false" />
+        <activity
             android:name=".E_pro1_2"
             android:exported="false" />
         <activity

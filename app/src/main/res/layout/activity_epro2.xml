@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".E_pro2">
+
+    <!-- ListView Section -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Spinner Section -->
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <!-- RadioGroup Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+        <RadioGroup
+            android:id="@+id/radgrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MALE" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FEMALE" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/resultprint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- CheckBox Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAR" />
+
+        <CheckBox
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIKE" />
+
+        <CheckBox
+            android:id="@+id/c3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRUCK" />
+
+        <CheckBox
+            android:id="@+id/c4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLANE" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:id="@+id/btnsubmitepro2"/>
+
+        <TextView
+            android:id="@+id/txtresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
