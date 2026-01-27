@@ -13,11 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class E_pro2 extends AppCompatActivity {
 
@@ -28,6 +24,7 @@ public class E_pro2 extends AppCompatActivity {
     CheckBox c1, c2, c3, c4;
     TextView resultPrint, txtResult;
     Button btn1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,26 +43,27 @@ public class E_pro2 extends AppCompatActivity {
         btn1 = findViewById(R.id.btnsubmitepro2);
         txtResult = findViewById(R.id.txtresult);
 
-        String city[] = {"RAJKOT","GONDAL","CHOTILA","JUNAGADH","MORBI","SURAT","SOMNATH","PORBANDAR"};
-        ArrayAdapter<String> arr = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1,city);
+        String[] city = {"RAJKOT", "GONDAL", "CHOTILA", "JUNAGADH", "MORBI", "SURAT", "SOMNATH", "PORBANDAR"};
+        ArrayAdapter<String> arr = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, city);
         listView.setAdapter(arr);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(E_pro2.this, "USER SELECT CITY : "+city[i], Toast.LENGTH_SHORT).show();
+                Toast.makeText(E_pro2.this, "USER SELECT CITY : " + city[i], Toast.LENGTH_SHORT).show();
             }
         });
 
         String[] country = {"India", "USA", "UK", "Canada"};
-        ArrayAdapter<String> arr_con = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1,country);
+        ArrayAdapter<String> arr_con = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, country);
         spinner.setAdapter(arr_con);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(E_pro2.this, "USER SELECT COUNTRY : "+country[i], Toast.LENGTH_SHORT).show();
+                Toast.makeText(E_pro2.this, "USER SELECT COUNTRY : " + country[i], Toast.LENGTH_SHORT).show();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -76,15 +74,13 @@ public class E_pro2 extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 String gender = "";
-                if(male.isChecked())
-                {
+                if (male.isChecked()) {
                     gender = male.getText().toString().trim();
                 }
-                if(female.isChecked())
-                {
+                if (female.isChecked()) {
                     gender = female.getText().toString().trim();
                 }
-                resultPrint.setText("USER SELECTED GENDER : "+gender);
+                resultPrint.setText("USER SELECTED GENDER : " + gender);
             }
         });
 
@@ -114,7 +110,6 @@ public class E_pro2 extends AppCompatActivity {
                 txtResult.setText("Vehicle : " + vehicle);
             }
         });
-
 
 
     }
