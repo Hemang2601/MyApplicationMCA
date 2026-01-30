@@ -123,6 +123,7 @@ public class E_pro3 extends AppCompatActivity {
                 } else {
                     txtResult.setText("Selected University:\n" + uni + "\n\nSelected Department(s):\n" + dept + "\n\nRating: " + rating + " / 5 ⭐");
                 }
+                //hemang
             }
         });
 
