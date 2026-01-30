@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class E_pro3 extends AppCompatActivity {
     MultiAutoCompleteTextView multiautocomplete;
     Button btnSubmit;
     TextView txtResult;
+    RatingBar rate;
 
 
     @Override
@@ -28,6 +30,7 @@ public class E_pro3 extends AppCompatActivity {
         multiautocomplete = findViewById(R.id.multiauto);
         btnSubmit = findViewById(R.id.btnSubmit);
         txtResult = findViewById(R.id.txtResult);
+        rate = findViewById(R.id.rate);
 
 
         String[] university = {
@@ -110,15 +113,18 @@ public class E_pro3 extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String uni = autocomplete.getText().toString().trim();
                 String dept = multiautocomplete.getText().toString().trim();
+                float rating = rate.getRating();
 
                 if (uni.isEmpty() || dept.isEmpty()) {
                     txtResult.setText("Please select University and Department");
                 } else {
-                    txtResult.setText("Selected University : " + uni + "\n\nSelected Department(s):\n" + dept);
+                    txtResult.setText("Selected University:\n" + uni + "\n\nSelected Department(s):\n" + dept + "\n\nRating: " + rating + " / 5 ⭐");
                 }
             }
         });
+
     }
 }

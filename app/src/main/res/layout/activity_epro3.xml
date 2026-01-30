@@ -76,6 +76,17 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <RatingBar
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="0"
+        android:isIndicator="false"
+        android:layout_marginTop="12dp"/>
+
     <!-- BUTTON -->
     <Button
         android:id="@+id/btnSubmit"
@@ -94,4 +105,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#333333"/>
+
+
+
 </LinearLayout>
