@@ -1,5 +1,6 @@
 package com.example.myapplicationmca;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class UNIT1_LIST_PAGE extends AppCompatActivity {
 
-    Button pro1,pro2,pro3,pro4,pro5;
+    Button pro1, pro2, pro3, pro4, pro5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,25 +31,27 @@ public class UNIT1_LIST_PAGE extends AppCompatActivity {
         pro1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UNIT1_LIST_PAGE.this, "Installing Android Studio IDE and Android SDK", Toast.LENGTH_SHORT).show();
             }
         });
         pro2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UNIT1_LIST_PAGE.this, "Write your First Android App", Toast.LENGTH_SHORT).show();
             }
         });
         pro3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT1_LIST_PAGE.this, UNIT1_pro3.class);
+                startActivity(i);
             }
         });
         pro4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT1_LIST_PAGE.this, UNIT1_pro4.class);
+                startActivity(i);
             }
         });
         pro5.setOnClickListener(new View.OnClickListener() {
