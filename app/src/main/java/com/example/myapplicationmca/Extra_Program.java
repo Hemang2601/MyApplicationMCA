@@ -41,7 +41,8 @@ public class Extra_Program extends AppCompatActivity {
         pro3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Extra_Program.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(Extra_Program.this, E_pro3.class);
+                startActivity(i);
             }
         });
         pro4.setOnClickListener(new View.OnClickListener() {

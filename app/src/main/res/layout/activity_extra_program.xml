@@ -62,12 +62,13 @@
                 android:id="@+id/btnpro3"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="PROGRAM 3"
+                android:text="AutoCompleteTextView / MultiAutoCompleteTextView"
                 app:cornerRadius="12dp"
                 app:strokeColor="@color/black"
                 app:strokeWidth="2dp" />
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnpro4"
