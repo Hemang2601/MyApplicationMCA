@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="8dp"
-                android:text="PROGRAM 4"
+                android:text="WebView"
                 app:cornerRadius="12dp"
                 app:strokeColor="@color/black"
                 app:strokeWidth="2dp" />
