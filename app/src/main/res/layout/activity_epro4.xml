@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
+    android:layout_marginTop="15dp"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".E_pro4">
 
     <TextView
