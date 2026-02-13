@@ -90,42 +90,48 @@ public class UNIT2_LIST_PAGE extends AppCompatActivity {
         pro11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro11.class);
+                startActivity(i);
             }
         });
 
         pro12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro12.class);
+                startActivity(i);
             }
         });
 
         pro13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro13.class);
+                startActivity(i);
             }
         });
 
         pro14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro14.class);
+                startActivity(i);
             }
         });
 
         pro15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro15.class);
+                startActivity(i);
             }
         });
 
         pro16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro16.class);
+                startActivity(i);
             }
         });
 

@@ -8,12 +8,30 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/marwadi_university"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/marwadi_university"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationMCA"
         tools:targetApi="31">
+        <activity
+            android:name=".UNIT2_pro16"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_pro15"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_pro14"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_pro13"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_pro12"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_pro11"
+            android:exported="false" />
         <activity
             android:name=".UNIT2_pro9"
             android:exported="false" />
