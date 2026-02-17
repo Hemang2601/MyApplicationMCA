@@ -210,21 +210,24 @@ public class UNIT2_LIST_PAGE extends AppCompatActivity {
         pro26.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro26.class);
+                startActivity(i);
             }
         });
 
         pro27.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro27.class);
+                startActivity(i);
             }
         });
 
         pro28.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT2_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT2_LIST_PAGE.this, UNIT2_pro28.class);
+                startActivity(i);
             }
         });
     }
