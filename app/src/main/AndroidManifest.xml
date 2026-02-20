@@ -15,6 +15,12 @@
         android:theme="@style/Theme.MyApplicationMCA"
         tools:targetApi="31">
         <activity
+            android:name=".UNIT3_pro37"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT3_pro36"
+            android:exported="false" />
+        <activity
             android:name=".UNIT3_pro35"
             android:exported="false" />
         <activity
