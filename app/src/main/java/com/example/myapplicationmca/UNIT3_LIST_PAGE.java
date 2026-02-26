@@ -112,42 +112,48 @@ public class UNIT3_LIST_PAGE extends AppCompatActivity {
         pro38.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT3_LIST_PAGE.this, "Program 38: NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro38.class);
+                startActivity(i);
             }
         });
 
         pro39.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT3_LIST_PAGE.this, "Program 39: NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro39.class);
+                startActivity(i);
             }
         });
 
         pro40.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT3_LIST_PAGE.this, "Program 40: NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro40.class);
+                startActivity(i);
             }
         });
 
         pro41.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT3_LIST_PAGE.this, "Program 41: NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro41.class);
+                startActivity(i);
             }
         });
 
         pro42.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT3_LIST_PAGE.this, "Program 42: NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro42.class);
+                startActivity(i);
             }
         });
 
         pro43.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT3_LIST_PAGE.this, "Program 43: NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro43.class);
+                startActivity(i);
             }
         });
     }
