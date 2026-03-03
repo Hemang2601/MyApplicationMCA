@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#E3F2FD"
+    android:fitsSystemWindows="true"
     tools:context=".UNIT2_pro27">
 
     <androidx.cardview.widget.CardView

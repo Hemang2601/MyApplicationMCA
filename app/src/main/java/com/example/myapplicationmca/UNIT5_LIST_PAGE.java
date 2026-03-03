@@ -1,56 +1,59 @@
 package com.example.myapplicationmca;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import com.google.android.material.card.MaterialCardView;
 
 public class UNIT5_LIST_PAGE extends AppCompatActivity {
-    Button pro1,pro2,pro3,pro4,pro5;
+
+    // Using MaterialCardView instead of Button to match your new XML
+    MaterialCardView pro51, pro52, pro53, pro54;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit5_list_page);
-        pro1 = findViewById(R.id.btnpro1);
-        pro2 = findViewById(R.id.btnpro2);
-        pro3 = findViewById(R.id.btnpro3);
-        pro4 = findViewById(R.id.btnpro4);
-        pro5 = findViewById(R.id.btnpro5);
 
-        pro1.setOnClickListener(new View.OnClickListener() {
+        // 1. Initialize views with the new IDs from your XML
+        pro51 = findViewById(R.id.btnPro51);
+        pro52 = findViewById(R.id.btnPro52);
+        pro53 = findViewById(R.id.btnPro53);
+        pro54 = findViewById(R.id.btnPro54);
+
+        // 2. Set Click Listeners
+        pro51.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT5_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                // Navigation logic
+                Intent i = new Intent(UNIT5_LIST_PAGE.this, UNIT5_pro51.class);
+                startActivity(i);
             }
         });
-        pro2.setOnClickListener(new View.OnClickListener() {
+
+        pro52.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT5_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT5_LIST_PAGE.this, UNIT5_pro52.class);
+                startActivity(i);
             }
         });
-        pro3.setOnClickListener(new View.OnClickListener() {
+
+        pro53.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT5_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT5_LIST_PAGE.this, UNIT5_pro53.class);
+                startActivity(i);
             }
         });
-        pro4.setOnClickListener(new View.OnClickListener() {
+
+        pro54.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(UNIT5_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
-            }
-        });
-        pro5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(UNIT5_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UNIT5_LIST_PAGE.this, UNIT5_pro54.class);
+                startActivity(i);
             }
         });
     }

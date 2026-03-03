@@ -7,6 +7,7 @@
     android:orientation="horizontal"
     android:layout_marginTop="20dp"
     android:baselineAligned="false"
+    android:fitsSystemWindows="true"
     android:background="#F8F9FA"
     tools:context=".UNIT2_pro9">
 

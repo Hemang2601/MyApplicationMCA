@@ -1,96 +1,186 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".UNIT5_LIST_PAGE">
+    android:background="#F4F7FC"
+    android:fitsSystemWindows="true">
 
-    <!-- Card with 5 Unit Buttons -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_units"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp">
+        android:padding="20dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit 5 Programs"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced Android Components"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPro51"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:rippleColor="#15000000">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:text="Unit 5 Program"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black" />
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-            <!-- Modern Material Buttons -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnpro1"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/white_circle_alpha"
+                    android:backgroundTint="#3F51B5"
+                    android:gravity="center"
+                    android:text="51"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Program 51"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPro52"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:rippleColor="#15000000">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="8dp"
-                android:text="PROGRAM 1"
-                app:cornerRadius="12dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnpro2"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/white_circle_alpha"
+                    android:backgroundTint="#009688"
+                    android:gravity="center"
+                    android:text="52"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Program 52"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPro53"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:rippleColor="#15000000">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="8dp"
-                android:text="PROGRAM 2"
-                app:cornerRadius="12dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnpro3"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/white_circle_alpha"
+                    android:backgroundTint="#FFC107"
+                    android:gravity="center"
+                    android:text="53"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Program 53"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPro54"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:rippleColor="#15000000">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="8dp"
-                android:text="PROGRAM 3"
-                app:cornerRadius="12dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnpro4"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="8dp"
-                android:text="PROGRAM 4"
-                app:cornerRadius="12dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp" />
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/white_circle_alpha"
+                    android:backgroundTint="#F44336"
+                    android:gravity="center"
+                    android:text="54"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnpro5"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="8dp"
-                android:text="PROGRAM 5"
-                app:cornerRadius="12dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Program 54"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

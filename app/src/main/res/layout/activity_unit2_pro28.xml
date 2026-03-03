@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:layout_marginTop="15dp"
     android:background="#F5F7F8"
+    android:fitsSystemWindows="true"
     tools:context=".UNIT2_pro28">
 
     <RelativeLayout

@@ -3,158 +3,63 @@ package com.example.myapplicationmca;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 
 public class UNIT3_LIST_PAGE extends AppCompatActivity {
-
-    // Declaring all 15 buttons
-    MaterialButton pro29, pro30, pro31, pro32, pro33, pro34, pro35, pro36, pro37, pro38, pro39, pro40, pro41, pro42, pro43;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit3_list_page);
 
-        pro29 = findViewById(R.id.btnpro29);
-        pro30 = findViewById(R.id.btnpro30);
-        pro31 = findViewById(R.id.btnpro31);
-        pro32 = findViewById(R.id.btnpro32);
-        pro33 = findViewById(R.id.btnpro33);
-        pro34 = findViewById(R.id.btnpro34);
-        pro35 = findViewById(R.id.btnpro35);
-        pro36 = findViewById(R.id.btnpro36);
-        pro37 = findViewById(R.id.btnpro37);
-        pro38 = findViewById(R.id.btnpro38);
-        pro39 = findViewById(R.id.btnpro39);
-        pro40 = findViewById(R.id.btnpro40);
-        pro41 = findViewById(R.id.btnpro41);
-        pro42 = findViewById(R.id.btnpro42);
-        pro43 = findViewById(R.id.btnpro43);
+        // We handle programs 29 through 43 in a loop to keep code clean
+        for (int i = 29; i <= 43; i++) {
+            // Find the ID dynamically (matches btn_pro29, btn_pro30, etc.)
+            String cardID = "btn_pro" + i;
+            int resID = getResources().getIdentifier(cardID, "id", getPackageName());
 
-        // 2. Setting Click Listeners for each button individually
+            MaterialCardView card = findViewById(resID);
 
-        pro29.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro29.class);
-                startActivity(i);
+            if (card != null) {
+                final int programNumber = i;
+                card.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        navigateToProgram(programNumber);
+                    }
+                });
             }
-        });
+        }
+    }
 
-        pro30.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro30.class);
-                startActivity(i);
-            }
-        });
+    /**
+     * Helper method to handle intent navigation
+     * This keeps the onCreate method very clean.
+     */
+    private void navigateToProgram(int num) {
+        Intent intent = null;
 
-        pro31.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro31.class);
-                startActivity(i);
+        switch (num) {
+            case 29: intent = new Intent(this, UNIT3_pro29.class); break;
+            case 30: intent = new Intent(this, UNIT3_pro30.class); break;
+            case 31: intent = new Intent(this, UNIT3_pro31.class); break;
+            case 32: intent = new Intent(this, UNIT3_pro32.class); break;
+            case 33: intent = new Intent(this, UNIT3_pro33.class); break;
+            case 34: intent = new Intent(this, UNIT3_pro34.class); break;
+            case 35: intent = new Intent(this, UNIT3_pro35.class); break;
+            case 36: intent = new Intent(this, UNIT3_pro36.class); break;
+            case 37: intent = new Intent(this, UNIT3_pro37.class); break;
+            case 38: intent = new Intent(this, UNIT3_pro38.class); break;
+            case 39: intent = new Intent(this, UNIT3_pro39.class); break;
+            case 40: intent = new Intent(this, UNIT3_pro40.class); break;
+            case 41: intent = new Intent(this, UNIT3_pro41.class); break;
+            case 42: intent = new Intent(this, UNIT3_pro42.class); break;
+            case 43: intent = new Intent(this, UNIT3_pro43.class); break;
+        }
 
-            }
-        });
-
-        pro32.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro32.class);
-                startActivity(i);
-            }
-        });
-
-        pro33.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro33.class);
-                startActivity(i);
-            }
-        });
-
-        pro34.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro34.class);
-                startActivity(i);
-            }
-        });
-
-        pro35.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro35.class);
-                startActivity(i);
-            }
-        });
-
-        pro36.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro36.class);
-                startActivity(i);
-
-            }
-        });
-
-        pro37.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro37.class);
-                startActivity(i);
-            }
-        });
-
-        pro38.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro38.class);
-                startActivity(i);
-            }
-        });
-
-        pro39.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro39.class);
-                startActivity(i);
-            }
-        });
-
-        pro40.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro40.class);
-                startActivity(i);
-            }
-        });
-
-        pro41.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro41.class);
-                startActivity(i);
-            }
-        });
-
-        pro42.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro42.class);
-                startActivity(i);
-            }
-        });
-
-        pro43.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT3_LIST_PAGE.this, UNIT3_pro43.class);
-                startActivity(i);
-            }
-        });
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
 }

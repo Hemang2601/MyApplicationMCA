@@ -3,63 +3,54 @@ package com.example.myapplicationmca;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import com.google.android.material.card.MaterialCardView;
 
 public class UNIT1_LIST_PAGE extends AppCompatActivity {
 
-    Button pro1, pro2, pro3, pro4, pro5;
+    // Use MaterialCardView to match your new XML design
+    MaterialCardView pro1, pro2, pro3, pro4, pro5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit1_list_page);
 
-        pro1 = findViewById(R.id.btnpro1);
-        pro2 = findViewById(R.id.btnpro2);
-        pro3 = findViewById(R.id.btnpro3);
-        pro4 = findViewById(R.id.btnpro4);
-        pro5 = findViewById(R.id.btnpro5);
+        // 1. Initialize the Cards using the IDs from your new design
+        pro1 = findViewById(R.id.btnPro1);
+        pro2 = findViewById(R.id.btnPro2);
+        pro3 = findViewById(R.id.btnPro3);
+        pro4 = findViewById(R.id.btnPro4);
+        pro5 = findViewById(R.id.btnPro5);
 
+        // 2. Set Click Listeners using clean Lambda syntax
 
-        pro1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "Installing Android Studio IDE and Android SDK", Toast.LENGTH_SHORT).show();
-            }
-        });
-        pro2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "Write your First Android App", Toast.LENGTH_SHORT).show();
-            }
-        });
-        pro3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT1_LIST_PAGE.this, UNIT1_pro3.class);
-                startActivity(i);
-            }
-        });
-        pro4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UNIT1_LIST_PAGE.this, UNIT1_pro4.class);
-                startActivity(i);
-            }
-        });
-        pro5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(UNIT1_LIST_PAGE.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
-            }
+        // Program 1: Info Toast
+        pro1.setOnClickListener(v ->
+                Toast.makeText(this, "Task: Installing Android Studio & SDK", Toast.LENGTH_SHORT).show()
+        );
+
+        // Program 2: Info Toast
+        pro2.setOnClickListener(v ->
+                Toast.makeText(this, "Task: Writing your First App", Toast.LENGTH_SHORT).show()
+        );
+
+        // Program 3: Navigate to UNIT1_pro3
+        pro3.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UNIT1_pro3.class);
+            startActivity(intent);
         });
 
+        // Program 4: Navigate to UNIT1_pro4
+        pro4.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UNIT1_pro4.class);
+            startActivity(intent);
+        });
+
+        // Program 5: Not yet implemented
+        pro5.setOnClickListener(v ->
+                Toast.makeText(this, "Program 5 is currently under development", Toast.LENGTH_SHORT).show()
+        );
     }
 }

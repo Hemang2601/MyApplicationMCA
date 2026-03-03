@@ -6,6 +6,7 @@
     android:background="#F8F9FB"
     android:layout_marginTop="20dp"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:padding="8dp">
 
     <com.google.android.material.card.MaterialCardView
