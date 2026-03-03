@@ -3,61 +3,60 @@ package com.example.myapplicationmca;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import com.google.android.material.card.MaterialCardView;
 
 public class Extra_Program extends AppCompatActivity {
-    Button pro1,pro2,pro3,pro4,pro5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_extra_program);
-        pro1 = findViewById(R.id.btnpro1);
-        pro2 = findViewById(R.id.btnpro2);
-        pro3 = findViewById(R.id.btnpro3);
-        pro4 = findViewById(R.id.btnpro4);
-        pro5 = findViewById(R.id.btnpro5);
 
-        pro1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Extra_Program.this, E_pro1_1.class);
-                startActivity(i);
-            }
-        });
-        pro2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Extra_Program.this, E_pro2.class);
-                startActivity(i);
-            }
-        });
-        pro3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Extra_Program.this, E_pro3.class);
-                startActivity(i);
-            }
-        });
-        pro4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Extra_Program.this, E_pro4.class);
-                startActivity(i);
-            }
-        });
-        pro5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Extra_Program.this, "NOT MAKE", Toast.LENGTH_SHORT).show();
-            }
-        });
+        // We use a loop to initialize btn_extra1 through btn_extra5
+        for (int i = 1; i <= 5; i++) {
+            String cardID = "btn_extra" + i;
+            int resID = getResources().getIdentifier(cardID, "id", getPackageName());
 
+            MaterialCardView card = findViewById(resID);
+
+            if (card != null) {
+                final int index = i;
+                card.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        handleNavigation(index);
+                    }
+                });
+            }
+        }
+    }
+
+    private void handleNavigation(int index) {
+        Intent intent = null;
+
+        switch (index) {
+            case 1:
+                intent = new Intent(Extra_Program.this, E_pro1_1.class);
+                break;
+            case 2:
+                intent = new Intent(Extra_Program.this, E_pro2.class);
+                break;
+            case 3:
+                intent = new Intent(Extra_Program.this, E_pro3.class);
+                break;
+            case 4:
+                intent = new Intent(Extra_Program.this, E_pro4.class);
+                break;
+            case 5:
+                // Program 5 is not made yet
+                Toast.makeText(this, "NOT MAKE", Toast.LENGTH_SHORT).show();
+                return; // Exit early so startActivity isn't called
+        }
+
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
 }
