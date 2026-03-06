@@ -2,23 +2,21 @@ package com.example.myapplicationmca;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.widget.Button;
 import android.widget.TimePicker;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Calendar;
 
 public class UNIT3_pro39 extends AppCompatActivity {
 
-    TimePicker timePicker;
-    Button btnSetAlarm;
-    AlarmManager alarmManager;
-    PendingIntent pendingIntent;
+    private TimePicker timePicker;
+    private Button btnSetAlarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,45 +26,48 @@ public class UNIT3_pro39 extends AppCompatActivity {
         timePicker = findViewById(R.id.timePicker);
         btnSetAlarm = findViewById(R.id.btnSetAlarm);
 
-        btnSetAlarm.setOnClickListener(v -> {
+        btnSetAlarm.setOnClickListener(v -> setAlarm());
+    }
 
-            int hour, minute;
+    private void setAlarm() {
+        int hour = timePicker.getHour();
+        int minute = timePicker.getMinute();
 
-            if (Build.VERSION.SDK_INT >= 23) {
-                hour = timePicker.getHour();
-                minute = timePicker.getMinute();
-            } else {
-                hour = timePicker.getCurrentHour();
-                minute = timePicker.getCurrentMinute();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, hour);
+        calendar.set(Calendar.MINUTE, minute);
+        calendar.set(Calendar.SECOND, 0);
+
+        // If time is in the past, set for tomorrow
+        if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
+        }
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlarmReceiver.class);
+
+        // Use FLAG_IMMUTABLE for Android 12+ compatibility
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
+        if (alarmManager != null) {
+            // Check for Exact Alarm permission on Android 12+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                if (!alarmManager.canScheduleExactAlarms()) {
+                    Intent i = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                    startActivity(i);
+                    return;
+                }
             }
 
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.HOUR_OF_DAY, hour);
-            calendar.set(Calendar.MINUTE, minute);
-            calendar.set(Calendar.SECOND, 0);
-
-            if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
-                calendar.add(Calendar.DAY_OF_MONTH, 1);
-            }
-
-            Intent intent = new Intent(UNIT3_pro39.this, AlarmReceiver.class);
-
-            pendingIntent = PendingIntent.getBroadcast(
-                    UNIT3_pro39.this,
-                    0,
-                    intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-            );
-
-            alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
-            alarmManager.set(
+            // setExactAndAllowWhileIdle makes sure it works in battery saver mode
+            alarmManager.setExactAndAllowWhileIdle(
                     AlarmManager.RTC_WAKEUP,
                     calendar.getTimeInMillis(),
                     pendingIntent
             );
 
-            Toast.makeText(this, "Alarm Set Successfully!", Toast.LENGTH_LONG).show();
-        });
+            Toast.makeText(this, "Alarm set for " + hour + ":" + String.format("%02d", minute), Toast.LENGTH_LONG).show();
+        }
     }
 }

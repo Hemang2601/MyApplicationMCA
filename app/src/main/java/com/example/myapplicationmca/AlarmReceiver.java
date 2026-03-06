@@ -9,18 +9,16 @@ import android.net.Uri;
 import android.widget.Toast;
 
 public class AlarmReceiver extends BroadcastReceiver {
-
     @Override
     public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context, "⏰ ALARM RINGING!", Toast.LENGTH_LONG).show();
 
-        Toast.makeText(context, "Alarm Ringing!", Toast.LENGTH_LONG).show();
-
-        try {
-            Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
-            Ringtone ringtone = RingtoneManager.getRingtone(context, alarmSound);
-            ringtone.play();
-        } catch (Exception e) {
-            e.printStackTrace();
+        // Play the default notification sound
+        Uri alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        if (alarmUri == null) {
+            alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         }
+        Ringtone ringtone = RingtoneManager.getRingtone(context, alarmUri);
+        ringtone.play();
     }
 }
