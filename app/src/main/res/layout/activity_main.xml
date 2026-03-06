@@ -33,7 +33,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/foca"
+                    android:src="@drawable/front"
                     android:layout_marginTop="2dp"
                     android:scaleType="fitCenter"
                     android:background="#E3F2FD" />
