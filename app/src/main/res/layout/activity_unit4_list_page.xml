@@ -17,11 +17,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unit 4 Programs"
-            android:textSize="22sp"
+            android:text="Unit 4"
+            android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#1A1A1A"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Working with Data &amp; Storage in Android"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="24dp"/>
 
         <!-- PROGRAM 44 -->
         <com.google.android.material.card.MaterialCardView
@@ -53,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 44"
+                    android:text="AlertDialog"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -90,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 45"
+                    android:text="Contacts Dialer"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -127,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 46"
+                    android:text="SharedPreferences"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -164,7 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 47"
+                    android:text="Internal Storage"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -201,7 +209,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 48"
+                    android:text="External Storage"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -238,7 +246,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 49"
+                    android:text="Interest Calculator"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -275,7 +283,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 50"
+                    android:text="VideoView"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>

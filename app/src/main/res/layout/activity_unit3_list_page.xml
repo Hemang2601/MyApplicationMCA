@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unit 3 Programs"
+            android:text="Unit 3"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#1A1A1A"
@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 29"
+                    android:text="Context Menu"
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 30"
+                    android:text="Tween Animation"
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 31"
+                    android:text="RelativeLayout"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -175,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 32"
+                    android:text="TableLayout"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -215,7 +215,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 33"
+                    android:text="URL Display"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -251,7 +251,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 34"
+                    android:text="AbsoluteLayout"
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -286,7 +286,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 35"
+                    android:text="Menu Color Changer"
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -326,7 +326,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 36"
+                    android:text="Frame Animation"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -366,7 +366,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 37"
+                    android:text="WebView"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -406,7 +406,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 38"
+                    android:text="ActionBar"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -442,7 +442,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 39"
+                    android:text="Alarm"
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -477,7 +477,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 40"
+                    android:text="SMS Between Emulators"
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -517,7 +517,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 41"
+                    android:text="Camera Capture"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -557,7 +557,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 42"
+                    android:text="Service"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -597,7 +597,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 43"
+                    android:text="AudioManager"
                     android:textColor="#212121"
                     android:textSize="17sp"
                     android:textStyle="bold" />

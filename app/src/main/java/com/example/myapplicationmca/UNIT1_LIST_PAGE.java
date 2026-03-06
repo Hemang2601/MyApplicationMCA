@@ -49,8 +49,9 @@ public class UNIT1_LIST_PAGE extends AppCompatActivity {
         });
 
         // Program 5: Not yet implemented
-        pro5.setOnClickListener(v ->
-                Toast.makeText(this, "Program 5 is currently under development", Toast.LENGTH_SHORT).show()
-        );
+        pro5.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UNIT1_pro5.class);
+            startActivity(intent);
+        });
     }
 }

@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unit 1 Programs"
+            android:text="Unit 1"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#1A1A1A"
@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 1: HelloWorld"
+                    android:text="HelloWorld"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 2: Activity Lifecycle"
+                    android:text="Activity Lifecycle"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -136,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 3: UI Layouts"
+                    android:text="UI Layouts"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 4: Event Handling"
+                    android:text="Event Handling"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -212,7 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 5: Intents &amp; Navigation"
+                    android:text="Intents &amp; Navigation"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>

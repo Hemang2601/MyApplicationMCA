@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unit 5 Programs"
+            android:text="Unit 5"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#1A1A1A"
@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 51"
+                    android:text="Location Service"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 52"
+                    android:text="Sensors"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -136,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 53"
+                    android:text="JSON Parsing"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Program 54"
+                    android:text="Doctor Database"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="#212121"/>
